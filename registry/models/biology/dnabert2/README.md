@@ -63,7 +63,7 @@ Inference and validation were executed on Georgia Tech's PACE ICE cluster throug
 
 Slurm job details are recorded in `evidence/slurm-jobs.txt`, with execution logs in `logs/`.
 
-The job scripts request an A100 GPU using `--gres=gpu:a100:1`. You can have access to the same Slurm account or substitute an allocation available to them.
+The job scripts request an A100 GPU using `--gres=gpu:a100:1`. Other users may need to substitute their own Slurm account, partition, or GPU allocation.
 
 ## Environment Setup
 
@@ -86,8 +86,8 @@ For example:
 
 ```bash
 cd ~/scratch
-git clone <YOUR_REPOSITORY_URL> dnabert2
-cd dnabert2
+git clone https://github.com/athellis/cybershuttle-ai4science-foundry.git
+cd cybershuttle-ai4science-foundry/registry/models/biology/dnabert2
 ```
 
 
@@ -192,16 +192,16 @@ Final successful jobs:
 
 | Job ID | Task | Status | Runtime |
 |---|---|---|---|
-| 6198973 | Inference | COMPLETED | 6 seconds |
-| 6198978 | Validation | COMPLETED | 6 seconds |
+| 6200298 | Inference | COMPLETED | 6 seconds |
+| 6200300 | Validation | COMPLETED | 6 seconds |
 
 Both jobs used the `coc-gpu` partition with an NVIDIA A100 GPU.
 
 Execution logs:
-- `logs/dnabert2-inference-6198973.out`
-- `logs/dnabert2-inference-6198973.err`
-- `logs/dnabert2-validation-6198978.out`
-- `logs/dnabert2-validation-6198978.err`
+- `logs/dnabert2-inference-6200298.out`
+- `logs/dnabert2-inference-6200298.err`
+- `logs/dnabert2-validation-6200300.out`
+- `logs/dnabert2-validation-6200300.err`
 
 Resource allocation details are available in `evidence/slurm-jobs.txt`.
 
